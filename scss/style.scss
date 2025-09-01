@@ -1,0 +1,87 @@
+@use 'reset.scss';
+@use 'variable' as *;
+
+//  <!-- 換圖輪播 -->
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #000;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// 共用區
+section{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.title {
+    margin: $s-title;
+
+    h2 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: $f-s-xl;
+        border-left: solid 5px $Charcoal; //裝飾線
+        padding-left: $s-20;//為了讓做新商品與裝飾線分開
+        span{
+            font-size: $f-s-md;
+            padding: $s-25;//為了與字分開所以用間距
+            
+        }
+        &::after{
+                content: '';
+                position: absolute;
+                right: 0;
+                width: calc(100% - 10rem);
+                height: 3px;
+                background-color:$light ;//$Charcoal
+                // 裝飾線要與文字一起縮放要用rem
+                
+            }
+
+    }
+
+}
+
+.list-box{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
