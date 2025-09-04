@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <main>
 
     <!-- 換圖輪播 -->
 
@@ -46,19 +47,19 @@
             <div class="list-box">
                 <!-- div.item*3>a[href="#"]>h3{NEW TITLE}+img[src="./images/new$.jpg" alt="最新產品"] -->
                 <div class="item">
-                    <a href="#">
+                    <a href="#"  class="mask mask-1">
                         <h3>HOT TITLE</h3>
                         <img src="./images/new1.jpg" alt="最新產品1">
                     </a>
                 </div>
                 <div class="item">
-                    <a href="#">
+                    <a href="#"  class="mask mask-2">
                         <h3>HOT TITLE</h3>
                         <img src="./images/new2.jpg" alt="最新產品2">
                     </a>
                 </div>
                 <div class="item">
-                    <a href="#">
+                    <a href="#"  class="mask mask-3">
                         <h3>HOT TITLE</h3>
                         <img src="./images/new3.jpg" alt="最新產品3">
                     </a>
@@ -73,34 +74,66 @@
     <section id="hot">
         <header class="title">
             <h2>最新商品 <span>NEW</span></h2>
-            </header>
+        </header>
 
-            <div class="list-box">
-                <!-- div.item*3>a[href="#"]>h3{NEW TITLE}+img[src="./images/new$.jpg" alt="最新產品"] -->
-                <div class="item">
-                    <a href="#">
-                        <h3>NEW TITLE</h3>
-                        <img src="./images/new1.jpg" alt="最新產品1">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <h3>NEW TITLE</h3>
-                        <img src="./images/new2.jpg" alt="最新產品2">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <h3>NEW TITLE</h3>
-                        <img src="./images/new3.jpg" alt="最新產品3">
-                    </a>
-                </div>
+        <div class="list-box">
+            <!-- div.item*3>a[href="#"]>h3{NEW TITLE}+img[src="./images/new$.jpg" alt="最新產品"] -->
+            <div class="item">
+                <a href="#" class="cilp mask-1">
+                    <h3>NEW TITLE</h3>
+                    <img src="./images/hot1.jpg" alt="最新產品1">
+                </a>
             </div>
-        
+            <div class="item" class="cilp mask2">
+                <a href="#">
+                    <h3>NEW TITLE</h3>
+                    <img src="./images/hot2.jpg" alt="最新產品2">
+                </a>
+            </div>
+            <div class="item">
+                <a href="#" class="cilp mask3">
+                    <h3>NEW TITLE</h3>
+                    <img src="./images/hot3.jpg" alt="最新產品3">
+                </a>
+            </div>
+        </div>
+
 
 
     </section>
 
+    <!-- 線上商店 -->
+    <section id="shop">
+        <header class="title">
+            <h2>線上商店 <span>Shop</span></h2>
+        </header>
+        <!-- div.s$*6>h3 -->
+
+         <!-- grid排版 -->
+        <div class="container">
+            <a href='#' class="s1">
+                <h3>線上商店活動</h3>
+            </a>
+            <a href='#'class="s2">
+                <h3>車輛配件</h3>
+            </a>
+            <a href='#'class="s3">
+                <h3>預約安裝服務</h3>
+            </a>
+            <a href='#'class="s4">
+                <h3>充電</h3>
+            </a>
+            <a href='#'class="s5">
+                <h3>服飾</h3>
+            </a>
+            <a href='#'class="s6">
+                <h3>生活時尚</h3>
+            </a>
+        </div>
+
+
+    </section>
+</main>
 
 
 
@@ -113,7 +146,7 @@
 
 
 
-
+    <footer>copyright &copy;特斯拉Tesla</footer>
 
 
     <!-- js 都放下面，效能會比較好!!!! -->
@@ -121,7 +154,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 
-    <!-- 自己的js放最後 -->
+    <!-- 自己的js放最後(權重問題) -->
+     <script src="./js/script.js"></script>
 
 </body>
 

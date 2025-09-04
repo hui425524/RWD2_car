@@ -1,6 +1,9 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
 //   direction: 'vertical',
+
+
+// 換圖輪播js
   loop: true,
   sliderPerview:'auto',
   spaceBetween:30,
@@ -21,3 +24,7 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-scrollbar',
   },
 });
+
+// js & jquery可以放在一起
+
+// jquery UI tabs
