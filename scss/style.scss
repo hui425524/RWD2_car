@@ -6,43 +6,64 @@
 .swiper {
     width: 100%;
     height: 100vh;
+
+
+    // html,
+    // body {
+    //     position: relative;
+    //     height: 100%;
+    // }
+
+    // body {
+    //     background: #000;
+    //     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    //     font-size: 14px;
+    //     color: #fff;
+    //     margin: 0;
+    //     padding: 0;
+    // }
+
+    // .swiper {
+    //     width: 100%;
+    //     height: 100%;
+    // }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .swiper-slide {
+        width: 80%;
+
+        &:nth-child(2n) {
+            width: 60%;
+
+            &:nth-child(3n) {
+                width: 40%;
+            }
+        }
+    }
+
 }
 
-// html,
-// body {
-//     position: relative;
-//     height: 100%;
-// }
-
-// body {
-//     background: #000;
-//     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-//     font-size: 14px;
-//     color: #fff;
-//     margin: 0;
-//     padding: 0;
-// }
-
-// .swiper {
+// .swiper-slide img {
+//     display: block;
 //     width: 100%;
 //     height: 100%;
+//     object-fit: cover;
 // }
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #444;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 // 共用區
 section {
@@ -52,34 +73,39 @@ section {
 }
 
 .title {
+    display: flex;
+    align-items: center;
     margin: $s-title;
 
     h2 {
-        position: relative;
-        display: flex;
-        align-items: center;
+        // position: relative;
+        // display: flex;
+        // align-items: center;
         font-size: $f-s-xl;
         border-left: solid 5px $Charcoal; //裝飾線
         padding-left: $s-md; //為了讓做新商品與裝飾線分開
+        white-space: nowrap;
 
         span {
             font-size: $f-s-md;
-            padding: $s30; //為了與字分開所以用間距
+            padding-left: $s30; //為了與字分開所以用間距
 
         }
+    }
 
-        &::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            width: calc(100% - 10rem);
-            height: 3px;
-            background-color:$Charcoal  ; //$light
-            // 裝飾線要與文字一起縮放要用rem
-
-        }
+    &::after {
+        content: '';
+        display: block;
+        // right: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $Charcoal ; //$light
+        // 裝飾線要與文字一起縮放要用rem
+        margin-left: $s30;
 
     }
+
+
 
 }
 
@@ -116,10 +142,10 @@ section {
 #new {
     .mask {
 
-        mask-image: url(../images/blobs-1.svg);
+        // mask-image: url(../images/blobs-1.svg);
         mask-size: contain; //完整顯示
         mask-repeat: no-repeat; //圖片才不會露餡
-
+        mask-position: center;
     }
 
     .mask-1 {
@@ -152,6 +178,7 @@ section {
         //
 
     }
+
     .mask-1 {
 
         mask-image: url(../images/blobs-1.svg);
@@ -179,11 +206,11 @@ section {
     .container {
         display: grid;
         gap: 30px;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(4,320px);
-        
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 320px);
 
-        >a{
+
+        >a {
             background-size: cover;
             background-position: center;
             display: flex;
@@ -193,7 +220,7 @@ section {
             font-weight: $f-w-b;
             // @extend %flex-center;
         }
-        
+
 
         .s1 {
             background-image: url(../images/new1.jpg);
@@ -205,49 +232,61 @@ section {
             background-image: url(../images/new1.jpg);
             justify-content: center;
             align-items: center;
+            color: antiquewhite;
         }
 
         .s3 {
             background-image: url(../images/new1.jpg);
-            grid-column: 1 / 3 ;// 1/span 2
-            justify-content: center;//flex-end
+            grid-column: 1 / 3; // 1/span 2
+            justify-content: center; //flex-end
             align-items: center;
         }
 
         .s4 {
             background-image: url(../images/new1.jpg);
-            grid-row: 3/span 2;// 3/5
-            justify-content: center;//flex-end
+            grid-row: 3/span 2; // 3/5
+            justify-content: center; //flex-end
             align-items: center;
         }
 
         .s5 {
             background-image: url(../images/new1.jpg);
-            justify-content: center;//flex-end
+            justify-content: center; //flex-end
             align-items: center;
         }
 
         .s6 {
             background-image: url(../images/new1.jpg);
-            justify-content: center;//flex-end
+            justify-content: center; //flex-end
             align-items: center;
         }
     }
 
 
 }
+
 //details.html
-.details-box{
+.details-box {
     display: grid;
     gap: 30px;
     grid-template-columns: 3fr 2fr;
 }
 
-// juery
-.ui-tabs .ui-tabs-nav{
-
+#album {
     display: flex;
 }
+
+// juery
+.ui-tabs .ui-tabs-nav {
+
+    display: flex;
+    // flex-direction: column;
+}
+
+.ui-state-active,
+.ui-widget-content,
+.ui-state-active,
+
 
 footer {
     line-height: 50px;

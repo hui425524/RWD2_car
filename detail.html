@@ -7,38 +7,42 @@
     <meta name="description" content="">
     <title>商品內頁</title>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/lightbox.min.css">
     <!-- 權重最重 要讓自己的放最下面 -->
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
+    <header class="Navbar">Navbar</header>
     <main>
 
-        <header class="Navbar">Navbar</header>
+
         <section>
             <header class="title">
-                <h2>T恤 <span></span></h2>
+                <h2>ZT系列 軟質 T 恤-中灰色 </h2>
             </header>
-            <div class="details">
+            <div class="details-box">
                 <!-- 頁籤相簿 -->
                 <div id="album">
 
-                    </ul>
-                    <div id="tabs-1">
-                        5
+                    <div class="tabs-content">
 
-                    </div>
-                    <div id="tabs-2">
-                        4
-                    </div>
-                    <div id="tabs-3">
-                        3
-                    </div>
-                    <div id="tabs-4">
-                        2
-                    </div>
-                    <div id="tabs-5">
-                        1
+
+                        <div id="tabs-1">5 <a href="tabs-1" title="點圖放大"><img src="tabs-1" alt=""></a></div>
+
+
+                        <div id="tabs-2"> 4<a href="tabs-2" title="點圖放大"><img src="tabs-2" alt=""></a></div>
+
+
+                        <div id="tabs-3"> 3<a href="tabs-3" title="點圖放大"><img src="tabs-3" alt=""></a></div>
+
+                        <div id="tabs-4"> 2 <a href="tabs-4" title="點圖放大"><img src="tabs-4" alt=""></a></div>
+
+
+                        <div id="tabs-5"> 1<a href="tabs-5" title="點圖放大"><img src="tabs-5" alt=""></a></div>
+
+
+
                     </div>
 
                     <!-- 按鈕 -->
@@ -48,11 +52,12 @@
                         <li><a href="#tabs-3"><img src="./images/detail-3.jpg" alt=""></a></li>
                         <li><a href="#tabs-4"><img src="./images/detail-4.jpg" alt=""></a></li>
                         <li><a href="#tabs-5"><img src="./images/detail-5.jpg" alt=""></a></li>
+                    </ul>
                 </div>
                 <!-- 詳細規格 -->
-                <div class="details"></div>
-
+                <div class="details">121</div>
             </div>
+
             <!-- html編輯器 -->
             <div class="content"></div>
         </section>
@@ -65,6 +70,7 @@
     <!-- jqery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="./js/lightbox.min.js"></script>
     <script>
         $(function () {
             $("#album").tabs();
