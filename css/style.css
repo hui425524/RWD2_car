@@ -280,7 +280,7 @@ section {
 #shop .container .s3 {
   background-image: url(../images/new1.jpg);
   grid-column: 1/3;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 #shop .container .s4 {
@@ -303,20 +303,62 @@ section {
 .details-box {
   display: grid;
   gap: 30px;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 5fr 4fr;
+}
+.details-box mark {
+  background-color: aqua;
+}
+.details-box .color1 {
+  background-color: #777771;
+}
+.details-box .color2 {
+  background-color: #f0f0ea;
+}
+.details-box .color3 {
+  background-color: #644c18;
 }
 
-#album {
-  display: flex;
+.ui-widget.ui-widget-content {
+  max-width: 400px;
+}
+
+.ui-tabs .ui-tabs-panel {
+  height: 70vh;
+}
+.ui-tabs .ui-tabs-panel img {
+  object-fit: contain;
+  height: 100%;
 }
 
 .ui-tabs .ui-tabs-nav {
   display: flex;
+  justify-content: space-between;
 }
 
-.ui-state-active,
-.ui-widget-content,
-.ui-state-active,
+.ui-widget-header {
+  background: transparent;
+  border: none;
+}
+
+.ui-tabs .ui-tabs-nav li {
+  border-radius: 3px;
+  border-bottom-width: 1px;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+  padding: 0;
+  height: 80px;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  background: #fefeff;
+  border: 1px solid #393a3a;
+}
+
 footer {
   line-height: 50px;
   text-align: center;
